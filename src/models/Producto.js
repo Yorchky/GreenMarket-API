@@ -1,3 +1,4 @@
+//Modelo de Producto
 const mongoose = require('mongoose');
 
 const productoSchema = new mongoose.Schema({
@@ -19,20 +20,20 @@ const productoSchema = new mongoose.Schema({
         default: 0
     },
     categoria: {
-       type: String,
-       required: true,
-       lowercase: true,
-      trim: true
+        type: String,
+        required: true,
+        lowercase: true,
+        trim: true
     },
     productor: {
         type: String,
         required: true
     },
-    negocioId:{
+    negocioId: {
         type: String,
         required: true
     },
-    alerta:{
+    alerta: {
         type: String
     },
     ubicacion: {
@@ -40,13 +41,13 @@ const productoSchema = new mongoose.Schema({
         required: true
     },
     nivelStock: {
-    type: String,
-    enum: ['bajo', 'medio', 'alto']
+        type: String,
+        enum: ['bajo', 'medio', 'alto']
     },
-    estado: { 
-    type: String,
-    enum: ['disponible', 'agotado'],
-    default: 'disponible'
+    estado: {
+        type: String,
+        enum: ['disponible', 'agotado'],
+        default: 'disponible'
 
     }
 });
