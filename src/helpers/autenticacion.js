@@ -1,4 +1,4 @@
-//Helpers
+//Helper
 const jwt = require('jsonwebtoken');
 
 // Function to generate JWT
